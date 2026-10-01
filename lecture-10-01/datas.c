@@ -32,7 +32,20 @@ int date_cmp(int d1, int m1, int y1, int d2, int m2, int y2) {
     return d1 - d2;
 }
 
+/**
+ * devolve o número de dias d eum dado mês ou -1 
+ * caso o mês seja inválida (não pertence ao intervalo [1.. 12]
+ * Parâmetros:
+ *    m - o número do mês
+ *    a - o ano pretendifo
+ * Retorno:
+ *    o número de dias do mês, caso este seja válido
+ *    -1 - caso o mês seja inválido
+ */
 int month_days(int m, int y) {
+	if (m < 0 || m > 12) {
+		return -1;
+	}
     int mdays;
     if (m == 2) {
         if (is_leap_year(y)) {
