@@ -64,6 +64,11 @@ int month_days(int m, int y) {
     return mdays;
 }
 
+
+/**
+ * Dada uma data assumida como válida, apresenta
+ * na consola a data do dia seguinte
+ */ 
 void next_day(int day, int month, int year) {
     int day2 = day, month2 = month, year2 = year;
 
