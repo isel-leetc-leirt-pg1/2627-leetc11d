@@ -9,8 +9,8 @@ int main() {
 	
 	printf("Indique uma seqência de inteiros terminada por um número negativo: ");
 	do {
-		scanf("%d", &curr);
-		if ( curr > 0) {
+		int res = scanf("%d", &curr);
+		if ( res == 1 && curr >= 0) {
 			sum += curr;
 			total++;
 		}
@@ -22,7 +22,7 @@ int main() {
 	while (!terminate);
 	
 	printf("foram lidos %d inteiros com sucesso\n", total);
-	printf("a média é : %lf\n", (double) sum / total);
+	printf("a média é : %lf\n",  sum / total);
 	
 	return 0;
 }
