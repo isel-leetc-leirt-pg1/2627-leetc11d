@@ -22,6 +22,17 @@ int array_find(int values[], int to_find, int size) {
 
 }
 
+int array_find2(int values[], int to_find, int size) {
+    int i = 0;
+    while (i < size) {
+        if (values[i] == to_find) {
+            return i;
+        }
+        ++i;
+    }
+    return -1;
+}
+
 int main() {
     int values[] = { 1, 3, 5, 7, 9, 11 };
     int index = array_find(values, 7, 6);
