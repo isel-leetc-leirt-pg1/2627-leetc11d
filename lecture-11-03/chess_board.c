@@ -7,6 +7,7 @@
 #define BOARD_Y 30
 #define CELL_SIDE 60
 #define NCELLS 8
+#define BOARD_SIDE (CELL_SIDE*NCELLS)
 
 /**
  * Desenha um tabuleiro de xadrez na janela gráfica
@@ -31,6 +32,7 @@ void draw_board() {
         }
         y += CELL_SIDE;
     }
+    graph_rect(BOARD_X, BOARD_Y, BOARD_SIDE, BOARD_SIDE, c_black, false);
 }
 int main() {
     graph_init2("Hello Window", WINDOW_WIDTH, WINDOW_HEIGHT );
