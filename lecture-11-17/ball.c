@@ -1,3 +1,12 @@
+/**
+ * coloca uma nova bola na arena 
+ * na posição do rato, quando se prime o seu botão esquerdo,
+ * até máximo de MAX_BALLS
+ * 
+ * Comando para construir o executável: gcc -o balls -Wall ball.c -lpg
+ * 
+ */
+
 #include <pg/pglib.h>
  
 
