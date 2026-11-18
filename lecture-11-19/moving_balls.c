@@ -41,12 +41,9 @@ void mouse_handler(MouseEvent me) {
         if (me.button == BUTTON_LEFT) {
             Ball b = ball_create_random(me.x, me.y);
             balls_add(b);
-            ball_draw(b);
         }
         else if (me.button == BUTTON_RIGHT) {
             balls_remove_at(me.x, me.y);
-            clear_scene();
-            balls_draw();
         }
     }
 }
